@@ -9,6 +9,13 @@ import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	private static Scene mainScene;
+	
+	public static Scene getMainScene() {
+		return mainScene;
+	}
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -19,7 +26,7 @@ public class Main extends Application {
 			scrollpane.setFitToWidth(true);
 			
 			
-			Scene mainScene = new Scene(scrollpane);
+			mainScene = new Scene(scrollpane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
